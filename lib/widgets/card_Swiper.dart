@@ -1,7 +1,11 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swipper/flutter_card_swiper.dart';
 
-class cardSwiper extends StatelessWidget {
+class CardSwiper extends StatelessWidget {
+  const CardSwiper({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -9,7 +13,7 @@ class cardSwiper extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: size.height * 0.5,
-      color: Colors.red,
+      color: Colors.blue,
       child: Swiper(
         itemCount:10,
         layout: SwiperLayout.STACK,
@@ -27,7 +31,7 @@ class cardSwiper extends StatelessWidget {
                   fit: BoxFit.cover,
                   ),
               ),
-            )
+            );
           },
         ),
     );
